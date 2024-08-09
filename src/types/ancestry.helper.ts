@@ -1,5 +1,5 @@
-import { AncestryNames, AncestrySourceMap } from "./ancestry.type";
-import { Source } from "./source.type";
+import { AncestryNames, AncestrySourceMap } from './ancestry.type';
+import { Source } from './source.type';
 
 /**
  * Retrieves the Source object associated with a specific AncestryName.
@@ -10,7 +10,7 @@ import { Source } from "./source.type";
  */
 export function getSourceByAncestry(ancestry: AncestryNames): Source {
   const source = AncestrySourceMap[ancestry];
-  
+
   if (!source) {
     throw new Error(`Invalid AncestryName: ${ancestry}`);
   }

@@ -1,9 +1,9 @@
 /**
  * Represents the names of different sources.
- * 
+ *
  * These are the official books and materials from which the game content is derived.
  */
-  export type SourceName =
+export type SourceName =
   | "Player's Handbook"
   | 'Mordenkainen Presents: Monsters of the Multiverse'
   | 'Dragonlance: Shadow of the Dragon Queen'
@@ -23,10 +23,10 @@
 
 /**
  * Represents the unique identifier for each source.
- * 
+ *
  * The identifiers are abbreviated versions of the source names.
  */
-  export type SourceID =
+export type SourceID =
   | 'PHB'
   | 'MotM'
   | 'SotDQ'
@@ -70,9 +70,8 @@ export const SourceMap: Record<SourceID, SourceName> = {
  * Represents a source with its name and identifier.
  */
 export interface Source {
-    /** The unique identifier for the source */
+  /** The unique identifier for the source */
   id: SourceID;
   /** The full name of the source */
   name: SourceName;
 }
-

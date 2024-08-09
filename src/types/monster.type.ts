@@ -3,7 +3,7 @@ import { Condition, DamageType, Size } from './generic.type';
 
 /**
  * Represents the various creature types found in the game.
- * 
+ *
  * Each creature type categorizes a group of monsters with similar characteristics.
  */
 export type CreatureTypeName =
@@ -24,7 +24,7 @@ export type CreatureTypeName =
 
 /**
  * Maps each CreatureTypeName to a corresponding emoji.
- * 
+ *
  * The emoji serves as a quick visual reference for the creature type.
  */
 export interface CreatureTypeEmojiMap {
@@ -46,7 +46,7 @@ export interface CreatureTypeEmojiMap {
 
 /**
  * Represents a creature type with its name and associated emoji.
- * 
+ *
  * This interface combines the name of the creature type with its corresponding visual representation.
  */
 export interface CreatureType {
@@ -58,7 +58,7 @@ export interface CreatureType {
 
 /**
  * Represents the damage modifiers a creature has.
- * 
+ *
  * This includes resistances, immunities, and vulnerabilities to various damage types.
  */
 interface DamageModifiers {
@@ -82,7 +82,7 @@ export interface Creature {
   creatureSize: Size;
   /** The conditions this creature is immune to */
   conditionImmunity: Condition[];
-    /** The subtype of the creature,  
-     * tipically an ancestry for humanoids. species or subtype of creature. or none */
+  /** The subtype of the creature,
+   * tipically an ancestry for humanoids. species or subtype of creature. or none */
   subtype?: AncestryNames | undefined;
 }

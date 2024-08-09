@@ -15,7 +15,10 @@ describe('getSourceByAncestry', () => {
 
   it('should return the correct source for another valid AncestryName (MotM)', () => {
     const ancestry: AncestryNames = 'Githyanki';
-    const expectedSource: Source = { id: 'MotM', name: 'Mordenkainen Presents: Monsters of the Multiverse' };
+    const expectedSource: Source = {
+      id: 'MotM',
+      name: 'Mordenkainen Presents: Monsters of the Multiverse',
+    };
 
     const result = getSourceByAncestry(ancestry);
 
@@ -25,12 +28,17 @@ describe('getSourceByAncestry', () => {
   it('should throw an error if the AncestryName does not exist', () => {
     const invalidAncestry = 'InvalidAncestry' as AncestryNames;
 
-    expect(() => getSourceByAncestry(invalidAncestry)).toThrowError(`Invalid AncestryName: ${invalidAncestry}`);
+    expect(() => getSourceByAncestry(invalidAncestry)).toThrowError(
+      `Invalid AncestryName: ${invalidAncestry}`
+    );
   });
 
   it('should handle ancestries from other sources (SAiS)', () => {
     const ancestry: AncestryNames = 'Giff';
-    const expectedSource: Source = { id: 'SAiS', name: 'Spelljammer: Adventures in Space' };
+    const expectedSource: Source = {
+      id: 'SAiS',
+      name: 'Spelljammer: Adventures in Space',
+    };
 
     const result = getSourceByAncestry(ancestry);
 
@@ -39,7 +47,10 @@ describe('getSourceByAncestry', () => {
 
   it('should handle ancestries from other sources (SotDQ)', () => {
     const ancestry: AncestryNames = 'Kender';
-    const expectedSource: Source = { id: 'SotDQ', name: 'Dragonlance: Shadow of the Dragon Queen' };
+    const expectedSource: Source = {
+      id: 'SotDQ',
+      name: 'Dragonlance: Shadow of the Dragon Queen',
+    };
 
     const result = getSourceByAncestry(ancestry);
 

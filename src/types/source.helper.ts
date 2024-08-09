@@ -1,4 +1,4 @@
-import { Source, SourceID, SourceMap } from "./source.type";
+import { Source, SourceID, SourceMap } from './source.type';
 
 /**
  * Retrieves a Source object by its ID.
@@ -11,7 +11,7 @@ import { Source, SourceID, SourceMap } from "./source.type";
  */
 export function getSourceByID(id: SourceID): Source {
   const name = SourceMap[id];
-  
+
   if (!name) {
     throw new Error(`Invalid SourceID: ${id}`);
   }
