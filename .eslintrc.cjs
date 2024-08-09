@@ -8,8 +8,6 @@ module.exports = {
     'plugin:@typescript-eslint/recommended-type-checked',
     'plugin:@typescript-eslint/stylistic-type-checked',
     'plugin:react-hooks/recommended',
-    // This disables the formatting rules in ESLint that Prettier is going to be responsible for handling.
-    // Make sure it's always the last config, so it gets the chance to override other configs.
     'prettier',
   ],
   ignorePatterns: ['dist', '.eslintrc.cjs'],
@@ -17,7 +15,8 @@ module.exports = {
   parserOptions: {
     ecmaVersion: 'latest',
     sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
+    // Point directly to the tsconfig that includes your source files since the linter was getting confused
+    project: ['./tsconfig.app.json'],
     tsconfigRootDir: __dirname,
   },
   plugins: ['react-refresh'],
